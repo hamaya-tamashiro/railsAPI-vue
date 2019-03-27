@@ -18,7 +18,7 @@ export default {
     }
   },
   mounted () {
-    axios.get("http://localhost:3000/users").then(response => (this.info = response))
+    axios.get(process.env.VUE_APP_BASE_API + "/users").then(response => (this.info = response))
   }
 }
 </script>
